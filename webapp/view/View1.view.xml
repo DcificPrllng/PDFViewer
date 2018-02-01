@@ -1,0 +1,16 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cis="PD.TotalCompStatement.controls" xmlns="sap.m"
+	controllerName="PD.TotalCompStatement.controller.View1" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="Total Rewards Statement" showHeader="false" busy="{view>/busy}" >
+				<cis:EmbedPdf id="form" src="/sap/opu/odata/sap/ZTCS_SRV/TCSFormSet%28%271%27%29/$value"/>
+<!--				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>                 
+						<Button text="Open as PDF" press="onPressDownload"/>
+					</Toolbar>
+				</footer>-->
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

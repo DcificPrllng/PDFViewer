@@ -1,0 +1,116 @@
+{
+	"_version": "1.5.0",
+	"sap.app": {
+		"id": "PD.TotalCompStatement",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"ZTCS_SRV": {
+				"uri": "/sap/opu/odata/sap/ZTCS_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "PD.TotalCompStatement.view.View1",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.28.10",
+			"libs": {
+				"sap.collaboration": {},
+				"sap.m": {},
+				"sap.ui.comp": {},
+				"sap.ui.core": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "PD.TotalCompStatement.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"js": [
+				{
+					"uri": "controls/EmbedPdf.js"
+				},
+				{
+					"uri": "controls/EmbedPdfRenderer.js"
+				},
+				{
+					"uri": "controls/PDFViewer.js"
+				},
+				{
+					"uri": "controls/PDFViewerRenderer.js"
+				}
+			],
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"config": {
+			"sapFiori2Adaptation": {
+				"style": true,
+				"collapse": false,
+				"title": true,
+				"back": false,
+				"hierarchy": false
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zhr_trs/webapp",
+		"_version": "1.1.0"
+	}
+}
